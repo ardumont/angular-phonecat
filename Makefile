@@ -7,6 +7,7 @@ update:
 	npm run update-webdriver
 
 install: deps update
+	npm install karma-firefox-launcher
 
 start:
 # start a local development web-server
