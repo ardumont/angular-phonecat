@@ -11,6 +11,10 @@ phonecatApp.controller('PhoneListCtrl', function($scope) {
     {'name': 'Motorola XOOM™ with Wi-Fi',
      'snippet': 'The Next, Next Generation tablet.'},
     {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.'}
+     'snippet': 'The Next, Next Generation tablet.'},
+    {'name': 'Galaxy™',
+     'snippet': 'The Previous, Next, Next, Future Generation tablet.'}
   ];
+
+    $scope.name = "tony";
 });
