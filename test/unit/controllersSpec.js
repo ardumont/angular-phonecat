@@ -6,14 +6,17 @@ describe('PhoneCat controllers', function() {
   describe('PhoneListCtrl', function(){
     var scope, ctrl, $httpBackend;
 
+      // Load the module before each test
     beforeEach(module('phonecatApp'));
+
+      // mock the injection
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
       $httpBackend.expectGET('phones/phones.json').
           respond([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
 
       scope = $rootScope.$new();
-      ctrl = $controller('PhoneListCtrl', {$scope: scope});
+        ctrl = $controller('PhoneListCtrl', {$scope: scope});
     }));
 
 
@@ -22,7 +25,7 @@ describe('PhoneCat controllers', function() {
       $httpBackend.flush();
 
       expect(scope.phones).toEqual([{name: 'Nexus S'},
-                                   {name: 'Motorola DROID'}]);
+                                    {name: 'Motorola DROID'}]);
     });
 
 
